@@ -1,4 +1,6 @@
-package com.formacionbdi.springboot.app.productos.model.entity;
+package com.formacionbdi.springboot.app.productos.models.entity;
+
+
 
 import java.io.Serializable;
 import java.util.Date;
@@ -7,21 +9,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.springframework.data.annotation.Id;
-
 @Entity
-@Table( name ="productos")
+@Table(name ="productos")
 public class Producto implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy =  GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
-	private double precion;
+	private double precio;
 	
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
@@ -40,10 +41,10 @@ public class Producto implements Serializable {
 		this.nombre = nombre;
 	}
 	public double getPrecion() {
-		return precion;
+		return precio;
 	}
 	public void setPrecion(double precion) {
-		this.precion = precion;
+		this.precio = precion;
 	}
 	public Date getCreateAt() {
 		return createAt;
