@@ -40,10 +40,10 @@ public class Producto implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public double getPrecion() {
+	public double getPrecio() {
 		return precio;
 	}
-	public void setPrecion(double precion) {
+	public void setPrecio(double precion) {
 		this.precio = precion;
 	}
 	public Date getCreateAt() {
