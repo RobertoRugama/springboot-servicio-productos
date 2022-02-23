@@ -16,8 +16,8 @@ import com.formacionbdi.springboot.app.productos.models.service.IProductoService
 @RestController    //Convierte_la_respuesta_a_una_estructura_jSON
 public class ProductoController {
 	
-	@Autowired
-	private Environment  env;
+	//@Autowired
+	//private Environment env;
 	
 	@Value("${server.port}")
 	private Integer port;
