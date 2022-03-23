@@ -29,4 +29,18 @@ public class ProductoServiceImpl implements IProductoService {
 		return productoDao.findById(id).orElse(null);
 	}
 
+	@Override
+	@Transactional
+	public Producto save(Producto producto) {
+		// TODO Auto-generated method stub
+		return productoDao.save(producto);
+	}
+
+	@Override
+	@Transactional
+	public void DeleteById(Long id) {
+		// TODO Auto-generated method stub
+		productoDao.deleteById(id);
+	}
+
 }
